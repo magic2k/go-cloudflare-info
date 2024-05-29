@@ -27,7 +27,7 @@ func main() {
 		println("Zone name: "+zoneName, "\nZone ID: "+zoneID)
 		records, err := getDNSRecords(ctx, api, zoneID)
 		for _, r := range records {
-			fmt.Printf("%s: %s\n", r.Name, r.Content)
+			fmt.Printf("%s %s: %s\n", r.Type, r.Name, r.Content)
 		}
 
 	} else {
